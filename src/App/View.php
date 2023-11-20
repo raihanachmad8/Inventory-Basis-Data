@@ -11,16 +11,16 @@ class View implements ViewInterface
 {
     public static function renderVIew(string $view, array $model = []): void
     {
-        require __DIR__ . '/../View/header.php';
-        require __DIR__ . '/../View/' . $view . '.php';
-        require __DIR__ . '/../View/footer.php';
+        require_once __DIR__ . '/../View/header.php';
+        require_once __DIR__ . '/../View/' . $view . '.php';
+        require_once __DIR__ . '/../View/footer.php';
     }
 
     public static function render(array $view, array $model = []): void
     {
-        require __DIR__ . "/../View/" . $view['header'] . ".php";
-        require __DIR__ . "/../View/" . $view['view'] . ".php";
-        require __DIR__ . "/../View/" . $view['footer'].".php";
+        // require_once __DIR__ . "/../View/" . $view['header'] . ".php";
+        // require_once __DIR__ . "/../View/" . $view['view'] . ".php";
+        // require_once __DIR__ . "/../View/" . $view['footer'].".php";
     }
 
     public static function redirect(string $url)
