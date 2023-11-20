@@ -1,5 +1,9 @@
 <?php
 
+interface RouterInterface {
+    
+}
+
 class Router {
     public static array $routes = [];
 
