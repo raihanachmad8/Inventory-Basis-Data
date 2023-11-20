@@ -1,8 +1,20 @@
-DROP DATABASE INVENTARIS; 
+select *
+from sys.databases;
+GO
 
-CREATE DATABASE INVENTARIS;
+USE [master];
+GO
 
-USE INVENTARIS;
+IF EXISTS(SELECT * FROM sys.databASes WHERE name = 'InventoryJTI')
+    DROP DATABASE [InventoryJTI];
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.databASes WHERE name = 'InventoryJTI')
+    CREATE DATABASE [InventoryJTI];
+GO
+
+USE [InventoryJTI];
+GO
 
 CREATE TABLE Level 
 (
